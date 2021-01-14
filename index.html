@@ -1,0 +1,37 @@
+<script>
+    function multi(a, b) {
+        return a * b;function add(a, b) {
+        return a + b;
+    }
+    function sub(a, b) {
+        return a - b;
+    }
+    function div(a, b) {
+        return a | b;
+    }
+    function calculator(a, b, operator) {
+        if(operator === "+") {
+            return add(a, b);
+        }
+        else if(operator === "-") {
+            return sub(a, b);
+        }
+        else if(operator === "*") {
+            return multi(a, b);
+        }
+        else if(operator === "/") {
+            return div(a, b);
+        }
+    }
+
+    document.getElementById('start').addEventListener('click', start);
+    function start() {
+        const g1 = parseFloat(document.getElementById('g1').value);
+        const g2 = parseFloat(document.getElementById('g2').value);
+        const operator = document.getElementById('operator').value;
+        const uitkomst = document.getElementById('uitkomst');
+        uitkomst.innerText = calculator(g1, g2, operator);
+    }
+</script>
+</body>
+</html>
